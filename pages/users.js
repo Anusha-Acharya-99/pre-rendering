@@ -1,4 +1,4 @@
-import User from './components/user';
+import User from "./components/user";
 
 const UserList = ({ users }) => {
   return (
@@ -18,9 +18,8 @@ const UserList = ({ users }) => {
 export default UserList;
 
 export async function getStaticProps() {
-  const reponse = await fetch('https://jsonplaceholder.typicode.com/users');
+  const reponse = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await reponse.json();
-  console.log(data);
   return {
     props: {
       users: data,
